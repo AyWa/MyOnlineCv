@@ -3,7 +3,9 @@ var myapp = angular.module('myappCv', ['angular-timeline','angular-scroll-animat
 myapp.controller('mesExp',function($scope){
   $scope.mesExperiences = [{
       type: 'study',
-      title: 'Ecole d\'ingénieur, ECE paris',
+      title_type: 'Ecole d\'ingénieur',
+      title_name:'ECE paris',
+      link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
       location: 'France',
       majeur:'Système embarqués',
       when_started: new Date(2013,8,1),
@@ -11,7 +13,9 @@ myapp.controller('mesExp',function($scope){
       content: 'yoloooooooooooooo.'
     }, {
       type: 'work',
-      title: 'Second heading',
+      title_type: 'IOs Developper',
+      title_name:'Company name',
+      location: 'Korea',
       when_started: new Date(2013,8,1),
       when_finished: 'Actual',
       content: 'More awesome content.'
@@ -31,7 +35,8 @@ myapp.controller('mesExp',function($scope){
     {
           $scope.mesExperiences[i].side='left';
           $scope.mesExperiences[i].badgeClass= 'info';
-          $scope.mesExperiences[i].badgeIconClass='fi-monitor';
+          if($scope.mesExperiences[i].type=="project") $scope.mesExperiences[i].badgeIconClass='fi-lightbulb';
+          else $scope.mesExperiences[i].badgeIconClass='fi-clipboard-notes';
     }
     else {
       $scope.mesExperiences[i].side= 'right';
