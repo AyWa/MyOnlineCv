@@ -12,7 +12,16 @@ myapp.controller('mesExp',function($scope){
     }, {
       type: 'work',
       title: 'Second heading',
-      when:'date ici',
+      when_started: new Date(2013,8,1),
+      when_finished: 'Actual',
+      content: 'More awesome content.'
+    }
+    , {
+      type: 'project',
+      title: 'Second heading',
+      location: 'Korea',
+      when_started: new Date(2013,8,1),
+      when_finished: new Date(2017,6,1),
       content: 'More awesome content.'
     }
   ];
@@ -29,7 +38,8 @@ myapp.controller('mesExp',function($scope){
       $scope.mesExperiences[i].badgeClass= 'warning'
       $scope.mesExperiences[i].badgeIconClass='fi-book-bookmark';
     }
-
+    if($scope.mesExperiences[i].location==='Korea')  $scope.mesExperiences[i].flagLocation='image\\flagKr.png';
+    if($scope.mesExperiences[i].location==='France') $scope.mesExperiences[i].flagLocation='image\\flagFr.png';
     console.log($scope.mesExperiences[i]);
   }
   console.log($scope.mesExperiences.length);
