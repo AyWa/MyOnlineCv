@@ -49,8 +49,8 @@ app.directive('myExp',[function(){
           $scope.mesExperiences[i].badgeClass= 'warning'
           $scope.mesExperiences[i].badgeIconClass='fi-book-bookmark';
         }
-        if($scope.mesExperiences[i].location==='Korea')  $scope.mesExperiences[i].flagLocation='image\\flagKr.png';
-        if($scope.mesExperiences[i].location==='France') $scope.mesExperiences[i].flagLocation='image\\flagFr.png';
+        if($scope.mesExperiences[i].location==='Korea')  $scope.mesExperiences[i].flagLocation='/image/flagKr.png';
+        if($scope.mesExperiences[i].location==='France') $scope.mesExperiences[i].flagLocation='/image/flagFr.png';
         console.log($scope.mesExperiences[i]);
       }
       console.log($scope.mesExperiences.length);
