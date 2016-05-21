@@ -14,7 +14,18 @@ To use this project, your computer needs:
 npm install
 
 ```
+### to test on chrome localhost:
 
+```
+npm install -g http-server
+
+```
+then in the project directory:
+
+```
+http-server
+
+```
 Foundation:
 
 ### Using the CLI
