@@ -1,13 +1,8 @@
 <div class="row">
   <h3>Skills</h3>
   <div class="row">
-    <my-skill name="C++" pourcentage="50"></my-skill>
-    <my-skill name="AngularJs" pourcentage="100"></my-skill>
-    <my-skill name="C++" pourcentage="50"></my-skill>
-    <my-skill name="C++" pourcentage="50"></my-skill>
-    <my-skill name="AngularJs" pourcentage="100"></my-skill>
-    <my-skill name="C++" pourcentage="50"></my-skill>
-    <my-skill name="C++" pourcentage="50"></my-skill>
-    <my-skill name="C++" pourcentage="50"></my-skill>
+    <div ng-repeat="skill in computerskills">
+      <my-skill name="{{skill.name}}" pourcentage="{{skill.level}}"></my-skill>
+    </div>
   </div>
 </div>

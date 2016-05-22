@@ -6,6 +6,7 @@ app.directive('mySkills',['myfactory',function(myfactory){
     },
     templateUrl: 'template/skills.html',
     controller:function($scope){
+      $scope.computerskills=myfactory.gotSkill();
       console.log("hello skills");
     }
   }

@@ -43,12 +43,38 @@ app.factory('myfactory',[function(){
     content: 'Embedded System Student at ECE Engineering school at Paris.',
     mobility: 'Permis B',
   };
+  var skills=[{
+      name: 'C++',
+      level: '80',
+    },{
+      name: 'AngularJs',
+      level: '80',
+    },{
+      name: 'C++',
+      level: '50',
+    },{
+      name: 'AngularJs',
+      level: '20',
+    },{
+      name: 'AngularJs',
+      level: '100',
+    },{
+      name: 'AngularJs',
+      level: '30',
+    },{
+      name: 'AngularJs',
+      level: '20',
+    },
+  ];
   return{
     gotExp: function(){
       return dataExp;
     },
     gotPers: function(){
       return dataPers;
+    },
+    gotSkill:function(){
+      return skills;
     },
   }
 }]);
