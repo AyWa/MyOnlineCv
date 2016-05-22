@@ -18,6 +18,7 @@ app.directive('mySkill',['myfactory',function(myfactory){
     scope:{
       name:'@',
       pourcentage:'@',
+      comment:'@',
     },
     templateUrl: 'template/skill.html',
     controller:function($scope){

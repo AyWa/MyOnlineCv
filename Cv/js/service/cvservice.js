@@ -6,10 +6,13 @@ app.factory('myfactory',[function(){
       title_name:'ECE paris',
       link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
       location: 'France',
-      majeur:'Système embarqués',
       when_started: new Date(2013,8,1),
       when_finished: new Date(2017,6,1),
-      content: 'yoloooooooooooooo.'
+      content: 'Étudiant à l\'École Centrale d\'Électronique (ECE) Paris.',
+      majeur: 'Système-embarqué',
+      OA: 'Robotique',
+      mineur: 'Management de projet',
+      diploma: 'Diplome d\'ingénieur',
     }, {
       type: 'work',
       title_type: 'IOs Developper',
@@ -68,12 +71,15 @@ app.factory('myfactory',[function(){
   var langueSkills=[{
       name: 'Français',
       level: '100',
+      comment: 'natif',
     },{
       name: 'Anglais',
       level: '80',
+      comment: 'Toeic: 875',
     },{
       name: 'Coréen',
       level: '10',
+      comment: 'débutant'
     }
   ];
   var listSkills=[

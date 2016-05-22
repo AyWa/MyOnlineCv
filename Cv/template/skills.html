@@ -1,9 +1,13 @@
 <div ng-repeat="skills in listSkills">
-  <div class="row">
-    <h3>{{skills.name}}</h3>
+  <div class="separation">
     <div class="row">
-      <div ng-repeat="skill in skills.skills">
-        <my-skill name="{{skill.name}}" pourcentage="{{skill.level}}"></my-skill>
+      <h3>{{skills.name}}</h3>
+      <div class="row">
+        <div class="separation">
+          <div ng-repeat="skill in skills.skills">
+            <my-skill name="{{skill.name}}" pourcentage="{{skill.level}}" comment="{{skill.comment}}"></my-skill>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,11 +1,19 @@
 <div class="small-12 medium-6 large-4 columns">
-  <div class="">
-    <img ng-src="{{logo}}" style="width: 40px">
-     {{name}}
-  </div>
-  <div class="">
-    <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
-      <div class="progress-meter" style="width: {{pourcentage}}%"></div>
+  <div>
+    <div class="row">
+      <div class="small-6 medium-6 large-6 columns">
+        <img ng-src="{{logo}}" style="width: 40px">
+         {{name}}
+      </div>
+      <div class="small-6 medium-6 large-6 columns" style="text-align: right;">
+        {{comment}}
+      </div>
+    </div>
+    <div class="bar">
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+        <div class="progress-meter" style="width: {{pourcentage}}%"></div>
+      </div>
     </div>
   </div>
+
 </div>
