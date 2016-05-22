@@ -4,7 +4,10 @@
 @import 'motion-ui';
 
 //mon CSS
-
+ul.timeline{
+  margin-left: 0;
+  margin-bottom: 0;
+}
 //end
 @include foundation-global-styles;
 @include foundation-grid;
