@@ -1,40 +1,13 @@
-var app = angular.module('mydirectiveExp', ['angular-timeline','angular-scroll-animate']);
-app.directive('myExp',[function(){
+var app = angular.module('mydirectiveExp', ['angular-timeline','angular-scroll-animate','myCvservice']);
+app.directive('myExp',['myfactory',function(myfactory){
   return{
     restrict: 'E',
     scope:{
     },
     templateUrl: 'template/exp.html',
     controller:function($scope){
-      $scope.mesExperiences = [{
-          type: 'study',
-          title_type: 'Ecole d\'ingénieur',
-          title_name:'ECE paris',
-          link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
-          location: 'France',
-          majeur:'Système embarqués',
-          when_started: new Date(2013,8,1),
-          when_finished: new Date(2017,6,1),
-          content: 'yoloooooooooooooo.'
-        }, {
-          type: 'work',
-          title_type: 'IOs Developper',
-          title_name:'Company name',
-          location: 'Korea',
-          when_started: new Date(2013,8,1),
-          when_finished: 'Actual',
-          content: 'More awesome content.'
-        }
-        , {
-          type: 'project',
-          title_type: 'Project name',
-          title_name:'xxx',
-          location: 'France',
-          when_started: new Date(2013,8,1),
-          when_finished: new Date(2017,6,1),
-          content: 'More awesome content.'
-        }
-      ];
+      //get the Exp obj
+      $scope.mesExperiences = myfactory.gotExp();
       for(var i=0;i<$scope.mesExperiences.length;i++)
       {
         if($scope.mesExperiences[i].type=="project"||$scope.mesExperiences[i].type=="work")
@@ -58,7 +31,6 @@ app.directive('myExp',[function(){
         $el.removeClass('timeline-hidden');
         $el.addClass('bounce-in');
       };
-
       // optional: not mandatory (uses angular-scroll-animate)
       $scope.animateElementOut = function($el) {
         $el.addClass('timeline-hidden');

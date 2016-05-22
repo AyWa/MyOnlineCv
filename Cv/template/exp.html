@@ -14,12 +14,13 @@
             <p data-equalizer-watch ng-show='exp.location'>
               <i class="fi-marker"></i>
               {{exp.location}}
-              <img src="{{exp.flagLocation}}"  class="show-for-medium" style="height: 20px; width: 30px;">
+              <img ng-src="{{exp.flagLocation}}"  class="show-for-medium" style="height: 20px; width: 30px;">
             </p>
           </div>
         </div>
       </timeline-heading>
       <p>{{exp.content}}</p>
+      {{exp.trytry}}
     </timeline-panel>
   </timeline-event>
 </timeline>
