@@ -1,1 +1,1 @@
-var myapp = angular.module('myappCv', ['mydirectiveExp']);
+var myapp = angular.module('myappCv', ['mydirectiveExp','mydirectiveTop']);

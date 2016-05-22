@@ -1,6 +1,6 @@
 var app = angular.module('myCvservice', []);
 app.factory('myfactory',[function(){
-  var data =[{
+  var dataExp =[{
       type: 'study',
       title_type: 'Ecole d\'ingénieur',
       title_name:'ECE paris',
@@ -29,9 +29,26 @@ app.factory('myfactory',[function(){
       content: 'More awesome content.'
     }
   ];
+  var dataPers={
+    photo: '/image/cv.png',
+    firstname: 'Marc',
+    lastname: 'Hurabielle',
+    adresse: '16, avenue Duval le Camus.',
+    city: 'Saint-Cloud',
+    postal_code: '92210',
+    country: 'France',
+    birth: new Date(1994,9-1,22),
+    phone: '+33620008703',
+    email: 'marc.hurabielle@gmail.com',
+    content: 'Embedded System Student at ECE Engineering school at Paris.',
+    mobility: 'Permis B',
+  };
   return{
     gotExp: function(){
-      return data;
+      return dataExp;
+    },
+    gotPers: function(){
+      return dataPers;
     },
   }
 }]);

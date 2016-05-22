@@ -1,0 +1,29 @@
+<div class="callout primary">
+    <div class="row">
+      <div class="small-12 medium-6 large-6 columns">
+        <h1>{{myPers.firstname}} {{myPers.lastname}}</h1>
+        <p>
+          {{myPers.content}}
+        </p>
+      </div>
+      <div class="small-12 medium-6 large-6 columns">
+        <div class="row" >
+          <div id="infoPerso" class="small-12 medium-7 large-8 columns ">
+            <i class="fi-home"></i> {{myPers.adresse}}
+            <div class="separator"></div>
+            {{myPers.postal_code}}
+            {{myPers.city}}
+            <div class="separator"></div>
+            <a href="tel:{{myPers.phone}}"><i class="fi-telephone"></i> {{myPers.phone}}</a>
+            <div class="separator"></div>
+            <a href="mailto:{{myPers.email}}"><i class="fi-mail"></i> {{myPers.email}}</a>
+            <div class="separator"></div>
+            <i class="fi-info"></i> {{myPers.mobility}}
+          </div>
+          <div class="callout secondary small-12 medium-5 large-4 columns">
+            <img ng-src="{{myPers.photo}}">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

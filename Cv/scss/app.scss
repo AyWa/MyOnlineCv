@@ -8,10 +8,15 @@ ul.timeline{
   margin-left: 0;
   margin-bottom: 0;
 }
+
+#infoPerso{
+  text-align:right;
+  vertical-align: middle;
+}
 //end
 @include foundation-global-styles;
 @include foundation-grid;
-// @include foundation-flex-grid;
+//@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
