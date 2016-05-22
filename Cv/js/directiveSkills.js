@@ -30,10 +30,16 @@ app.directive('mySkill',['myfactory',function(myfactory){
       if($scope.name==='Anglais') $scope.logo="/image/flagUk.png";
       if($scope.name==='Coréen') $scope.logo="/image/flagKr.png";
       $scope.animload = $interval(function(){
-        console.log('animed');
          $scope.pourcentage_anim+=2;
          if($scope.pourcentage_anim>=$scope.pourcentage) $interval.cancel($scope.animload);
       },30);
+    },
+    link: function(scope,elem,attrs){
+      /*console.log(elem);
+      console.log(attrs);
+      scope.$watch(function() { return elem.is(':visible') }, function() {
+          console.log(scope.name);
+      }); */
     }
   }
 }]);

@@ -71,7 +71,7 @@ app.factory('myfactory',[function(){
   var langueSkills=[{
       name: 'Français',
       level: '100',
-      comment: 'Natif',
+      comment: 'Langue maternelle',
     },{
       name: 'Anglais',
       level: '80',
@@ -92,6 +92,27 @@ app.factory('myfactory',[function(){
       skills: langueSkills,
     },
   ];
+  var Hobbies=[{
+      name:'Voyage',
+      icone:'fi-compass',
+    },{
+      name:'Movie',
+      icone:'fi-play-video',
+    },{
+      name:'Sport',
+      icone:'fi-heart',
+    },{
+      name:'Music',
+      icone:'fi-music',
+    },{
+      name:'Hiking',
+      icone:'fi-mountains',
+    }
+    ,{
+      name:'Photographie',
+      icone:'fi-photo',
+    }
+  ];
   return{
     gotExp: function(){
       return dataExp;
@@ -102,5 +123,8 @@ app.factory('myfactory',[function(){
     gotListSkill:function(){
       return listSkills;
     },
+    gotHobbies:function(){
+      return Hobbies;
+    }
   }
 }]);
