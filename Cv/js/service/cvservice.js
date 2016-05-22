@@ -71,15 +71,15 @@ app.factory('myfactory',[function(){
   var langueSkills=[{
       name: 'Français',
       level: '100',
-      comment: 'natif',
+      comment: 'Natif',
     },{
       name: 'Anglais',
       level: '80',
-      comment: 'Toeic: 875',
+      comment: 'Professionel, Toeic: 875',
     },{
       name: 'Coréen',
       level: '10',
-      comment: 'débutant'
+      comment: 'Débutant'
     }
   ];
   var listSkills=[
