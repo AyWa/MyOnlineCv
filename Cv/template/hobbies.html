@@ -3,8 +3,8 @@
     <h3>Hobbies</h3>
     <div class="row">
       <div class="separation">
-        <div ng-repeat="hobbie in hobbies">
-          <div class="small-6 medium-3 large-2 columns">
+        <div ng-repeat="hobbie in hobbies" when-visible="animateElementIn" when-not-visible="animateElementOut" class="hidden">
+          <div class="small-6 medium-3 large-2 columns " >
             <div class="row">
               <i class="{{hobbie.icone}} style1"></i>
             </div>

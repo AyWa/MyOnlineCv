@@ -3,6 +3,9 @@
 @import 'foundation';
 @import 'motion-ui';
 
+div.hidden {
+  visibility: hidden;
+}
 //mon CSS
 ul.timeline{
   margin-left: 0;
