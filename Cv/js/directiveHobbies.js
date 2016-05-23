@@ -8,7 +8,6 @@ app.directive('myHobbies',['myfactory',function(myfactory){
     controller:function($scope){
       $scope.hobbies=myfactory.gotHobbies();
       console.log('hello Hobbies');
-
       $scope.animateElementIn = function($el) {
         $el.removeClass('hidden');
         $el.addClass('animated fadeInUp');

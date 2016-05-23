@@ -6,7 +6,7 @@
         <div ng-repeat="hobbie in hobbies">
           <div when-visible="animateElementIn" when-not-visible="animateElementOut" class="small-6 medium-3 large-2 columns hidden hobbies" >
             <div class="row">
-              <i class="{{hobbie.icone}} style1"></i>
+              <i class="{{hobbie.icone}} style1" ng-class="{'rubberBand animated': hover}" style="display:block;"ng-mouseenter="hover = true" ng-mouseleave="hover = false" ></i>
             </div>
             <div class="row">
               {{hobbie.name}}
