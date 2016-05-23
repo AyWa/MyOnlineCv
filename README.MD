@@ -40,6 +40,7 @@ I m not the authorship of the following MIT license:
 ```
  -Robert Pocklington: http://github.com/rpocklin/angular-timeline
  -Robert Pocklington: http://github.com/rpocklin/angular-scroll-animate
+ -Daniel Eden https://github.com/daneden/animate.css
  -Foundation
  -C++ logo: designed by Bjarne Stroustrup
 ```
