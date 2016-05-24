@@ -3,11 +3,25 @@
 @import 'foundation';
 @import 'motion-ui';
 
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
 div.hidden {
   visibility: hidden;
 }
 div.hobbies{
-  text-align: center;
+      text-align: center;
 }
 //mon CSS
 ul.timeline{
