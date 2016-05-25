@@ -45,6 +45,7 @@ app.factory('myfactory',[function(){
     email: 'marc.hurabielle@gmail.com',
     content: 'Embedded System Student at ECE Engineering school at Paris.',
     mobility: 'Permis B',
+    linkedin: 'https://fr.linkedin.com/in/marc-hurabielle-55ba1b102'
   };
   var computerSkills=[{
     name: 'C++',
