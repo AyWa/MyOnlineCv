@@ -7,9 +7,9 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Cv</li>
-      <li><a href="" ng-click="test('Experience')">Experience</a></li>
-      <li><a href="" ng-click="test('Competence')">Competence</a></li>
-      <li><a href="" ng-click="test('Hobbies')">Hobbies</a></li>
+      <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" ng-click="test('Experience')">Experience</a></li>
+      <li ng-class="{'top-bar-highlight': hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false"><a href="" ng-click="test('Competence')">Competence</a></li>
+      <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test('Hobbies')">Hobbies</a></li>
     </ul>
   </div>
   <div class="top-bar-right">
