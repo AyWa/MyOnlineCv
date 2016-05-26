@@ -59,9 +59,11 @@ $text-color: #fff;
   }
  }
 }
-#noseperate{
-  border-left:none;
+.noseperate{
+  border-left:none !important;
+  min-height:0px !important;
 }
+
 .footer-links {
   list-style-type: none;
   li {
