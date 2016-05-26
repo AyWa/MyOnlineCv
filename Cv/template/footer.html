@@ -1,13 +1,15 @@
 <footer class="footer primary">
   <div class="row full-width">
-    <div class="small-12 medium-6 large-8 columns">
+    <div class="small-12 medium-9 large-9 columns">
       <h4>Me contacter</h4>
       <form novalidate class="simple-form row">
         <div class="small-12 medium-12 large-6 columns">
           Name: <input type="text" ng-model="e" />
+          <p class="help-text" id="passwordHelpText">obligatoire</p>
         </div>
         <div class="noseperate small-12 medium-12 large-6 columns">
           E-mail: <input type="email" ng-model="a" />
+          <p class="help-text" id="passwordHelpText">email non valide</p>
         </div>
         <div class="noseperate small-12 medium-12 large-12 columns">
           Message
@@ -15,15 +17,16 @@
           <p class="help-text" id="passwordHelpText">au moins: 0/150 caractére</p>
         </div>
       </form>
+      <a class="small expanded button secondary" href="#">Wow, Small Expand</a>
     </div>
-    <div class="small-12 medium-6 large-4 columns" >
+    <div class="small-12 medium-3 large-3 columns" >
       <h4>Work With Me:</h4>
       <div class="row">
-        <a class="small-12 medium-6 large-6 columns" target="_blank" href="{{myPers.linkedin}}">
+        <a class="small-6 medium-12 large-12 columns" target="_blank" href="{{myPers.linkedin}}">
           <i class="fi-social-linkedin small-12 medium-12 large-12 columns"></i>
           Mon Linkedin
         </a>
-        <a class="noseperate small-12 medium-6 large-6 columns" href="mailto:{{myPers.email}}">
+        <a class="noseperate small-6 medium-12 large-12 columns" href="mailto:{{myPers.email}}">
           <i class="fi-mail small-12 medium-12 large-12 columns"></i>
           {{myPers.email}}
         </a>
