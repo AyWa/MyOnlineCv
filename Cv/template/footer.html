@@ -5,11 +5,11 @@
       <form name="myForm" class="row" ng-submit="reviewForm.$valid" novalidate>
         <div class="small-12 medium-12 large-6 columns nocenter">
           Name: <input type="text" name="nom" ng-model="F_name" ng-required="true"/>
-          <p ng-hide="myForm.nom.$valid" class="help-text">obligatoire</p>
+          <p ng-hide="myForm.nom.$valid==true || myForm.nom.$pristine==true" class="help-text">obligatoire</p>
         </div>
         <div class="noseperate small-12 medium-12 large-6 columns nocenter">
           E-mail: <input type="email" name="email" id="yolo" ng-model="F_email" ng-required="true"/>
-            <p ng-hide="myForm.email.$valid" class="help-text">email non valide</p>
+            <p ng-hide="myForm.email.$valid || myForm.email.$pristine==true" class="help-text">email non valide</p>
         </div>
         <div class="noseperate small-12 medium-12 large-12 columns nocenter">
           Message
