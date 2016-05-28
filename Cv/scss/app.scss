@@ -59,6 +59,11 @@ $text-color: #fff;
   }
  }
 }
+
+
+footer .nocenter{
+  text-align: left !important;
+}
 .noseperate{
   border-left:none !important;
   min-height:0px !important;
@@ -69,6 +74,16 @@ $text-color: #fff;
   li {
     margin-top: .5em;
   }
+}
+input.ng-invalid.ng-dirty{
+  border-color: #ec5840;
+}
+
+.ng-invalid.ng-dirty{
+  border-color: #ec5840;
+}
+.ng-valid.ng-dirty{
+  border-color: #FFFFFF;
 }
 
 div.hidden {
