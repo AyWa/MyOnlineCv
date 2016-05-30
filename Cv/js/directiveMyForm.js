@@ -6,8 +6,7 @@ app.directive('showInvalid', [function () {
     priority: 1, // force the postLink below to run after other directives
     link: function (scope, element, attrs, modelCtrl) {
       modelCtrl.$parsers.push(function (viewValue) {
-        console.log(viewValue);
-        console.log(modelCtrl.$viewValue);
+        scope.length_tf=modelCtrl.$viewValue.length;
         return (viewValue === undefined) ? modelCtrl.$viewValue : viewValue;
       });
     }
