@@ -2,22 +2,24 @@
   <div class="row full-width">
     <div class="small-12 medium-9 large-9 columns">
       <h4>Me contacter</h4>
-      <form name="myForm" class="row" ng-submit="reviewForm.$valid" novalidate>
+      <form name="myForm" class="row" ng-submit="myForm.$valid && sendMessage()" novalidate>
         <div class="small-12 medium-12 large-6 columns nocenter">
-          Name: <input type="text" name="nom" ng-model="F_name" ng-required="true"/>
+          Name: <input type="text" name="nom" ng-model="MyMessage.name" placeholder="Votre nom" ng-required="true"/>
           <p ng-hide="myForm.nom.$valid==true || myForm.nom.$pristine==true" class="help-text">obligatoire</p>
         </div>
         <div class="noseperate small-12 medium-12 large-6 columns nocenter">
-          E-mail: <input type="email" name="email" id="yolo" ng-model="F_email" ng-required="true"/>
-            <p ng-hide="myForm.email.$valid || myForm.email.$pristine==true" class="help-text">email non valide</p>
+          E-mail: <input type="email" name="email" ng-model="MyMessage.email" placeholder="Votre email" ng-required="true"/>
+            <p ng-hide="myForm.email.$valid || myForm.email.$pristine==true" class="help-text" >email non valide</p>
         </div>
         <div class="noseperate small-12 medium-12 large-12 columns nocenter">
           Message
-          <textarea rows="5" cols="50" placeholder="5 characters min, 500 max" ng-required="true" ng-minlength="5" ng-maxlength="150" ng-model="testyy" show-invalid></textarea>
-          <p class="help-text">au moins: {{0 +length_tf}}/150 caractére</p>
+          <textarea rows="5" cols="50" placeholder="5 characters min, 500 max" ng-required="true" ng-minlength="5" ng-maxlength="500" ng-model="MyMessage.message" show-invalid></textarea>
+          <p class="help-text">au moins: {{0 +length_tf}}/500 caractére</p>
+        </div>
+        <div class="noseperate small-12 medium-12 large-12 columns nocenter">
+          <input class="small expanded button secondary" type="submit" value="Submit">
         </div>
       </form>
-      <a class="small expanded button secondary" href="#">Send Message</a>
     </div>
     <div class="small-12 medium-3 large-3 columns" >
       <h4>Work With Me:</h4>
