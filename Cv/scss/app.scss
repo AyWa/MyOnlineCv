@@ -2,6 +2,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import '_settings';
 
 .top-bar-highlight{
   background: rgba(0, 0, 0, 0.05);
@@ -9,22 +10,46 @@
 .footer{
   margin-top: 50px;
 }
-$text-color: #fff;
-.no-js {
-  @include breakpoint(small only) {
-    .top-bar {
-      display: none;
-    }
-  }
+$text-color: $white;
 
-  @include breakpoint(medium) {
-    .title-bar {
-      display: none;
-    }
+.timeline li timeline-badge.primaryM {
+  background-color: map-get($foundation-palette, primary) !important;
+}
+.timeline li timeline-badge.successM {
+  background-color: map-get($foundation-palette, success) !important;
+}
+.timeline li timeline-badge.warningM {
+  background-color: map-get($foundation-palette, warning) !important;
+}
+.timeline li timeline-badge.dangerM {
+  background-color: map-get($foundation-palette, alert) !important;
+}
+.timeline li timeline-badge.infoM {
+  background-color: map-get($foundation-palette, secondary) !important;
+  //map-get($foundation-palette, primary) !important;
+}
+
+.timeline li timeline-badge.primary {
+  background-color: #2e6da4 !important; }
+.timeline li timeline-badge.success {
+  background-color: #3f903f !important; }
+.timeline li timeline-badge.warning {
+  background-color: #f0ad4e !important; }
+.timeline li timeline-badge.danger {
+  background-color: #d9534f !important; }
+.timeline li timeline-badge.info {
+  background-color: #5bc0de !important; }
+//map-get($foundation-palette, secondary);
+
+
+// footer CSS
+.summary{
+  background-color: $primary-color !important;
+  color: $text-color !important;
+  a {
+    color: $special-link;
   }
 }
-// footer CSS
-
 .footer {
   background-color: $primary-color;
   padding: 2rem 4rem;

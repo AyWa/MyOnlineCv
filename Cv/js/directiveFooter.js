@@ -16,6 +16,7 @@ app.directive('myFooter',['myfactory',function(myfactory){
         console.log($scope.MyMessage);
         $scope.MyMessage={};
         $scope.myForm.$setPristine();
+        $scope.length_tf=0;
       }
     },
     link:function(scope,element,attrs)

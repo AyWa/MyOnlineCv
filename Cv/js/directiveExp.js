@@ -13,13 +13,16 @@ app.directive('myExp',['myfactory',function(myfactory){
         if($scope.mesExperiences[i].type=="project"||$scope.mesExperiences[i].type=="work")
         {
               $scope.mesExperiences[i].side='left';
-              $scope.mesExperiences[i].badgeClass= 'info';
-              if($scope.mesExperiences[i].type=="project") $scope.mesExperiences[i].badgeIconClass='fi-lightbulb';
+              $scope.mesExperiences[i].badgeClass= 'dangerM';
+              if($scope.mesExperiences[i].type=="project"){
+                $scope.mesExperiences[i].badgeClass= 'warningM';
+                $scope.mesExperiences[i].badgeIconClass='fi-lightbulb';
+              }
               else $scope.mesExperiences[i].badgeIconClass='fi-clipboard-notes';
         }
         else {
           $scope.mesExperiences[i].side= 'right';
-          $scope.mesExperiences[i].badgeClass= 'warning'
+          $scope.mesExperiences[i].badgeClass= 'primaryM'
           $scope.mesExperiences[i].badgeIconClass='fi-book-bookmark';
         }
         if($scope.mesExperiences[i].location==='Korea')  $scope.mesExperiences[i].flagLocation='/image/flagKr.png';

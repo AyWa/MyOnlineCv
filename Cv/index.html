@@ -12,24 +12,69 @@
     <link rel="stylesheet" href="css-no-foundation/animate.css">
   </head>
   <body>
-    <!-- Directive top Bar!-->
-    <my-top-bar></my-top-bar>
-    <!-- Directive top !-->
-    <my-summary></my-summary>
-    <!-- Directive des exp !-->
-    <my-exp id="Experience"></my-exp>
-    <!-- Directive des skills !-->
-    <my-skills id="Competence"></my-skills>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <ul class="vertical menu" data-drilldown><!-- start of the drilldown multi level menu -->
+            <li>
+              <a>Item 1</a>
+              <ul class="vertical menu">
+                <li><a href="#">Item 1A</a></li>
+                <li><a href="#">Item 1B</a></li>
+                <li><a href="#">Item 1C</a></li>
+                <li><a href="#">Item 1D</a></li>
+                <li><a href="#">Item 1E</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>Item 2</a>
+              <ul class="vertical menu">
+                <li><a href="#">Item 2A</a></li>
+                <li><a href="#">Item 2B</a></li>
+                <li><a href="#">Item 2C</a></li>
+                <li><a href="#">Item 2D</a></li>
+                <li><a href="#">Item 2E</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>Item 3</a>
+              <ul class="vertical menu">
+                <li><a href="#">Item 3A</a></li>
+                <li><a href="#">Item 3B</a></li>
+                <li><a href="#">Item 3C</a></li>
+                <li><a href="#">Item 3D</a></li>
+                <li><a href="#">Item 3E</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Item 4</a></li>
+          </ul>
+          <!--  à Edit avec une version canvas!-->
+          <my-summary></my-summary>
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+          <!-- Directive top Bar!-->
+          <my-top-bar></my-top-bar>
+          <!-- Directive top !-->
+          <my-summary></my-summary>
+          <!-- Directive des exp !-->
+          <my-exp id="Experience"></my-exp>
+          <!-- Directive des skills !-->
+          <my-skills id="Competence"></my-skills>
+          <!-- fin du canvas !-->
+        </div>
+      </div>
+    </div>
     <!-- Directive des skills !-->
     <my-hobbies id="Hobbies"></my-hobbies>
-    <!-- Script !-->
+    <!-- Directive du footer !-->
     <my-footer></my-footer>
+    <!-- Script !-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
     <script src="bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
-    <script src="js/myapps.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/directiveExp.js"></script>
     <script src="js/directiveTop.js"></script>
     <script src="js/directiveSkills.js"></script>
@@ -38,7 +83,8 @@
     <script src="js/directiveMyForm.js"></script>
     <script src="js/directiveFooter.js"></script>
     <script src="js/service/cvservice.js"></script>
-    <script src="js/app.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/foundation-sites/js/foundation.offcanvas.js"></script>
+
   </body>
 </html>
