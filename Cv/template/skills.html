@@ -1,7 +1,7 @@
-<div ng-repeat="skills in listSkills">
+<div id="{{myTabName[$index].id}}" ng-repeat="skills in listSkills">
   <div class="separation">
     <div class="row">
-      <h3>{{skills.name}}</h3>
+      <h3>{{myTabName[$index].name}}</h3>
       <div class="row">
         <div class="separation">
           <div ng-repeat="skill in skills.skills">

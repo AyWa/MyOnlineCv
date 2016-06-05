@@ -6,7 +6,7 @@
           {{myPers.content}}
         </p>
       </div>
-      <div class="small-12 medium-6 large-6 columns">
+      <div class="show-for-medium medium-6 large-6 columns">
         <div class="row" >
           <div id="infoPerso" class="small-12 medium-7 large-8 columns ">
             <i class="fi-home"></i> {{myPers.adresse}}
@@ -20,10 +20,26 @@
             <div class="separator"></div>
             <i class="fi-info"></i> {{myPers.mobility}}
           </div>
-          <div class="callout secondary small-12 medium-5 large-4 columns">
+          <div class="callout secondary medium-5 large-4 columns">
             <img ng-src="{{myPers.photo}}">
           </div>
         </div>
+      </div>
+    </div>
+    <div ng-show="incanvas=='true'" class="row" style="text-align:center;">
+      <div class="callout secondary small-12 columns">
+        <img ng-src="{{myPers.photo}}">
+      </div>
+      <div class="small-12 columns">
+        <a href="tel:{{myPers.phone}}"><i class="fi-telephone"></i> {{myPers.phone}}</a>
+      </div>
+      <div class="small-12 columns">
+        <a href="mailto:{{myPers.email}}" target="_blank">{{myPers.email}}</a>
+      </div>
+      <div class="small-12 columns">
+        <a target="_blank" href="{{myPers.linkedin}}">
+          <i style="font-size: 60px;" class="fi-social-linkedin small-12 medium-12 large-12 columns"></i>
+        </a>
       </div>
     </div>
 </div>

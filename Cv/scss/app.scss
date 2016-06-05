@@ -3,7 +3,9 @@
 @import 'foundation';
 @import 'motion-ui';
 @import '_settings';
-
+textarea{
+  resize: none;
+}
 .top-bar-highlight{
   background: rgba(0, 0, 0, 0.05);
 }
@@ -124,7 +126,7 @@ ul.timeline{
 }
 .separation{
   padding-top: 5px;
-  margin: 15px 15px 15px 15px;
+  margin: 15px 7px 15px 7px;
 }
 .style1 {
   font-size: 70px;

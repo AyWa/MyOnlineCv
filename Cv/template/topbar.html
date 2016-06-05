@@ -10,9 +10,16 @@
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li class="menu-text">Cv</li>
-          <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" ng-click="test('Experience')">Experience</a></li>
-          <li ng-class="{'top-bar-highlight': hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false"><a href="" ng-click="test('Competence')">Competence</a></li>
-          <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test('Hobbies')">Hobbies</a></li>
+          <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" ng-click="test(mesId[0].id)">{{mesId[0].name}}</a></li>
+          <li>
+            <a>{{mesId[1].name}}</a>
+            <ul class="dropdown menu">
+              <li ng-repeat="object in mesId[1].tab">
+                <a href="" ng-click="test(object.id)">{{object.name}}</a>
+              </li>
+            </ul>
+          </li>
+          <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test(mesId[2].id)">{{mesId[2].name}}</a></li>
         </ul>
       </div>
       <div class="top-bar-right">

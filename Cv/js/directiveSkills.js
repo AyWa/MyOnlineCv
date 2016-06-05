@@ -3,6 +3,7 @@ app.directive('mySkills',['myfactory',function(myfactory){
   return{
     restrict: 'E',
     scope:{
+      myTabName: '=myTabName',
     },
     templateUrl: 'template/skills.html',
     controller:function($scope){

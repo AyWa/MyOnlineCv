@@ -4,6 +4,7 @@ app.directive('myTopBar',['myfactory',function(myfactory){
     restrict: 'E',
     templateUrl: 'template/topbar.html',
     controller:function($scope){
+      $mesId=myfactory.gotMenu();
       $(document).foundation();
       console.log("hello top bar");
     },

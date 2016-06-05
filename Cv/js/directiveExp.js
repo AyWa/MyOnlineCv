@@ -3,6 +3,7 @@ app.directive('myExp',['myfactory',function(myfactory){
   return{
     restrict: 'E',
     scope:{
+      mySectionName: '=mySectionName',
     },
     templateUrl: 'template/exp.html',
     controller:function($scope){

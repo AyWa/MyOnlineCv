@@ -1,28 +1,30 @@
-<div class="row">
-  <h3>My Experience</h3>
-  <timeline ng-cloak>
-    <timeline-event ng-repeat="exp in mesExperiences"  side="{{exp.side}}" >
-      <timeline-badge class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-        <i class="{{exp.badgeIconClass}}"></i>
-      </timeline-badge>
-      <timeline-panel class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-        <timeline-heading>
-          <h4>{{exp.title_type}}, <a target="_blank" href="{{exp.link_name}}">{{exp.title_name}}</a></h4>
-          <div class="row data-equalizer">
-            <div class="small-7 medium-6 large-4 columns panel" ng-show="exp.when_started">
-              <p data-equalizer-watch><i class="fi-clock"></i> {{exp.when_started | date:'yyyy'}}/{{exp.when_finished | date:'yyyy'}}</p>
+<div class="separation">
+  <div class="row">
+    <h3>{{mySectionName}}</h3>
+    <timeline ng-cloak>
+      <timeline-event ng-repeat="exp in mesExperiences"  side="{{exp.side}}" >
+        <timeline-badge class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+          <i class="{{exp.badgeIconClass}}"></i>
+        </timeline-badge>
+        <timeline-panel class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+          <timeline-heading>
+            <h4>{{exp.title_type}}, <a target="_blank" href="{{exp.link_name}}">{{exp.title_name}}</a></h4>
+            <div class="row data-equalizer">
+              <div class="small-7 medium-6 large-4 columns panel" ng-show="exp.when_started">
+                <p data-equalizer-watch><i class="fi-clock"></i> {{exp.when_started | date:'yyyy'}}/{{exp.when_finished | date:'yyyy'}}</p>
+              </div>
+              <div class="small-5 medium-6 large-8 columns panel" align="right" >
+                <p data-equalizer-watch ng-show='exp.location'>
+                  <i class="fi-marker show-for-medium">{{exp.location}}</i>
+                  <img ng-src="{{exp.flagLocation}}"   style="height: 20px; width: 30px;">
+                </p>
+              </div>
             </div>
-            <div class="small-5 medium-6 large-8 columns panel" align="right" >
-              <p data-equalizer-watch ng-show='exp.location'>
-                <i class="fi-marker show-for-medium">{{exp.location}}</i>
-                <img ng-src="{{exp.flagLocation}}"   style="height: 20px; width: 30px;">
-              </p>
-            </div>
-          </div>
-        </timeline-heading>
-        <p>{{exp.content}}</p>
-        {{exp.trytry}}
-      </timeline-panel>
-    </timeline-event>
-  </timeline>
+          </timeline-heading>
+          <p>{{exp.content}}</p>
+          {{exp.trytry}}
+        </timeline-panel>
+      </timeline-event>
+    </timeline>
+  </div>
 </div>

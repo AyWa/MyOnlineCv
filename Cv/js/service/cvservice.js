@@ -1,5 +1,23 @@
 var app = angular.module('myCvservice', []);
 app.factory('myfactory',[function(){
+  var menu=[{
+      id: "Experience",
+      name: "Experiences"
+    },{
+      id: "Skills",
+      name: "Compétences",
+      tab:[{
+        id: "ComputerSkills",
+        name: "Computers Skills"
+      },{
+        id: "Langues",
+        name: "Langues"
+      }],
+    },{
+      id: "Hobbies",
+      name:"Hobbies"
+    }
+  ]
   var dataExp =[{
       type: 'study',
       title_type: 'Ecole d\'ingénieur',
@@ -85,11 +103,9 @@ app.factory('myfactory',[function(){
   ];
   var listSkills=[
     {
-      name: 'Computer Skills',
       skills: computerSkills,
     },
     {
-      name: 'Langues',
       skills: langueSkills,
     },
   ];
@@ -126,6 +142,9 @@ app.factory('myfactory',[function(){
     },
     gotHobbies:function(){
       return Hobbies;
+    },
+    gotMenu:function(){
+      return menu;
     }
   }
 }]);
