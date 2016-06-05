@@ -29,25 +29,25 @@
             <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test(mesId[2].id)">{{mesId[2].name}}</a></li>
           </ul>
           <!--  à Edit avec une version canvas!-->
-          <my-summary incanvas="true"></my-summary>
+          <my-summary incanvas="true" langue="Actual_Langue"></my-summary>
         </div>
         <div class="off-canvas-content" data-off-canvas-content>
           <!-- Directive top Bar!-->
-          <my-top-bar></my-top-bar>
+          <my-top-bar langue="Actual_Langue"></my-top-bar>
           <!-- Directive top !-->
-          <my-summary incanvas="false"></my-summary>
+          <my-summary incanvas="false" langue="Actual_Langue"></my-summary>
           <!-- Directive des exp !-->
-          <my-exp id="{{mesId[0].id}}" my-section-name="mesId[0].name"></my-exp>
+          <my-exp id="{{mesId[0].id}}" my-section-name="mesId[0].name" langue="Actual_Langue"></my-exp>
           <!-- Directive des skills !-->
-          <my-skills id="{{mesId[1].id}}" my-section-name="mesId[1].name" my-tab-name="mesId[1].tab"></my-skills>
+          <my-skills id="{{mesId[1].id}}" my-section-name="mesId[1].name" my-tab-name="mesId[1].tab" langue="Actual_Langue"></my-skills>
           <!-- fin du canvas !-->
         </div>
       </div>
     </div>
     <!-- Directive des skills !-->
-    <my-hobbies id="{{mesId[2].id}}"></my-hobbies>
+    <my-hobbies id="{{mesId[2].id}}" langue="Actual_Langue"></my-hobbies>
     <!-- Directive du footer !-->
-    <my-footer></my-footer>
+    <my-footer langue="Actual_Langue"></my-footer>
     <!-- Script !-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
@@ -66,6 +66,8 @@
     <script src="js/service/cvservice.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="bower_components/foundation-sites/js/foundation.offcanvas.js"></script>
-
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>

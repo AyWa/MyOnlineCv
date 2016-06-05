@@ -1,23 +1,54 @@
 var app = angular.module('myCvservice', []);
 app.factory('myfactory',[function(){
+  var Langues=[{
+    N_langue: "Francais",
+    url:"../image/flagFr.png"
+    },{
+    N_langue: "English",
+    url:"../image/flagUk.png"
+  }]
   var menu=[{
-      id: "Experience",
-      name: "Experiences"
-    },{
-      id: "Skills",
-      name: "Compétences",
-      tab:[{
-        id: "ComputerSkills",
-        name: "Computers Skills"
+    langue:"Francais",
+    menu:[
+      {
+        id: "Experience",
+        name: "Experiences"
       },{
-        id: "Langues",
-        name: "Langues"
-      }],
+        id: "Compétences",
+        name: "Compétences",
+        tab:[{
+          id: "ComputerSkills",
+          name: "Compétences Informatiques"
+        },{
+          id: "Langues",
+          name: "Langues"
+        }],
+      },{
+        id: "Hobbies",
+        name:"Centres d'intérêts"
+      }]
     },{
-      id: "Hobbies",
-      name:"Hobbies"
-    }
-  ]
+    langue:"English",
+    menu:[
+      {
+        id: "Experiences",
+        name: "Experiences"
+      },{
+        id: "Skills",
+        name: "Skills",
+        tab:[{
+          id: "ComputerSkills",
+          name: "Computers Skills"
+        },{
+          id: "Language",
+          name: "Language"
+        }],
+      },{
+        id: "Hobbies",
+        name:"Hobbies"
+      }
+    ]
+  }];
   var dataExp =[{
       type: 'study',
       title_type: 'Ecole d\'ingénieur',
@@ -50,21 +81,41 @@ app.factory('myfactory',[function(){
       content: 'More awesome content.'
     }
   ];
-  var dataPers={
-    photo: '/image/cv.png',
-    firstname: 'Marc',
-    lastname: 'Hurabielle',
-    adresse: '16, avenue Duval le Camus.',
-    city: 'Saint-Cloud',
-    postal_code: '92210',
-    country: 'France',
-    birth: new Date(1994,9-1,22),
-    phone: '+33620008703',
-    email: 'marc.hurabielle@gmail.com',
-    content: 'Embedded System Student at ECE Engineering school at Paris.',
-    mobility: 'Permis B',
-    linkedin: 'https://fr.linkedin.com/in/marc-hurabielle-55ba1b102'
-  };
+  var dataPers=[{
+    langue: 'Francais',
+    data: {
+      photo: '/image/cv.png',
+      firstname: 'Marc',
+      lastname: 'Hurabielle',
+      adresse: '16, avenue Duval le Camus.',
+      city: 'Saint-Cloud',
+      postal_code: '92210',
+      country: 'France',
+      birth: new Date(1994,9-1,22),
+      phone: '+33620008703',
+      email: 'marc.hurabielle@gmail.com',
+      content: 'Étudiant à l\'École Centrale d\’Électronique (ECE) Paris. Majeur: Système embarqué.',
+      mobility: 'Permis B',
+      linkedin: 'https://fr.linkedin.com/in/marc-hurabielle-55ba1b102'
+      }
+    },{
+    langue: 'English',
+    data: {
+      photo: '/image/cv.png',
+      firstname: 'Marc',
+      lastname: 'Hurabielle',
+      adresse: '16, avenue Duval le Camus.',
+      city: 'Saint-Cloud',
+      postal_code: '92210',
+      country: 'France',
+      birth: new Date(1994,9-1,22),
+      phone: '+33620008703',
+      email: 'marc.hurabielle@gmail.com',
+      content: 'Embedded System Student at ECE Engineering school at Paris.',
+      mobility: 'Driving license',
+      linkedin: 'https://www.linkedin.com/in/marc-hurabielle-55ba1b102/en'
+    }
+  }];
   var computerSkills=[{
     name: 'C++',
     level: '80',
@@ -130,21 +181,83 @@ app.factory('myfactory',[function(){
       icone:'fi-photo',
     }
   ];
+  var Footer=[{
+    langue: 'Francais',
+    data:{
+      formTitle: 'Me contacter',
+      name: "Nom",
+      help_name: "Votre nom",
+      error_name: "Obligatoire",
+      email: "Email",
+      help_email: "Votre email",
+      error_email: "Email non valide",
+      message: "Votre message",
+      help_message:"500 caractére maximum (5 minimum)",
+      error_message: "caractére: ",
+      submit_message: "Envoyer",
+      workwithme: "travailler avec moi:",
+      myLinkedin: "Mon Linkedin"
+      }
+    },{
+    langue: 'English',
+    data:{
+      formTitle: 'Contact me',
+      name: "Name",
+      help_name: "Your nom",
+      error_name: "required",
+      email: "Email",
+      help_email: "Your email",
+      error_email: "Email unvalid",
+      message: "Your message",
+      help_message:"500 character maximum (5 minimum)",
+      error_message: "character:",
+      submit_message: "Submit",
+      workwithme: "Work with me:",
+      myLinkedin: "My Linkedin"
+    }
+  }];
   return{
-    gotExp: function(){
+    gotLangues: function(){
+      return Langues;
+    },
+    gotExp: function(langue){
       return dataExp;
     },
-    gotPers: function(){
-      return dataPers;
+    gotPers: function(langue){
+      for(var j=0;j<dataPers.length;j++)
+      {
+        if(dataPers[j].langue==langue)
+        {
+          return dataPers[j];
+          break;
+        }
+      }
     },
-    gotListSkill:function(){
+    gotListSkill:function(langue){
       return listSkills;
     },
-    gotHobbies:function(){
+    gotHobbies:function(langue){
       return Hobbies;
     },
-    gotMenu:function(){
-      return menu;
+    gotMenu:function(langue){
+      for(var i=0;i<menu.length;i++)
+      {
+        if(menu[i].langue===langue)
+        {
+          return menu[i];
+          break;
+        }
+      }
+    },
+    gotFooter:function(langue){
+      for(var i=0;i<Footer.length;i++)
+      {
+        if(Footer[i].langue===langue)
+        {
+          return Footer[i];
+          break;
+        }
+      }
     }
   }
 }]);

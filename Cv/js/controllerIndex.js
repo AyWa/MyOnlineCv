@@ -1,6 +1,8 @@
 var myApp = angular.module('controllerIndex', ['myCvservice']);
 
 myApp.controller('indexController', ['$scope','myfactory' ,function($scope,myfactory) {
-  $scope.mesId=myfactory.gotMenu();
-  console.log($scope.mesId);
+  $scope.Actual_Langue='Francais'
+  $scope.MonMenue=myfactory.gotMenu($scope.Actual_Langue);
+  $scope.mesId=$scope.MonMenue.menu;
+  $scope.Actual_Langue=$scope.MonMenue.langue;
 }]);

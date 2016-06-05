@@ -4,11 +4,13 @@ app.directive('myExp',['myfactory',function(myfactory){
     restrict: 'E',
     scope:{
       mySectionName: '=mySectionName',
+      myLangue:'=langue'
     },
     templateUrl: 'template/exp.html',
     controller:function($scope){
       //get the Exp obj
-      $scope.mesExperiences = myfactory.gotExp();
+      console.log($scope.myLangue)
+      $scope.mesExperiences = myfactory.gotExp($scope.myLangue);
       for(var i=0;i<$scope.mesExperiences.length;i++)
       {
         if($scope.mesExperiences[i].type=="project"||$scope.mesExperiences[i].type=="work")

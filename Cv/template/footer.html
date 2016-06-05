@@ -1,32 +1,32 @@
 <footer class="footer primary">
   <div class="row full-width">
     <div class="small-12 medium-9 large-9 columns">
-      <h4>Me contacter</h4>
+      <h4>{{MyFooter.formTitle}}</h4>
       <form name="myForm" class="row" ng-submit="myForm.$valid && sendMessage()" novalidate>
         <div class="small-12 medium-12 large-6 columns nocenter">
-          Name: <input type="text" name="nom" ng-model="MyMessage.name" placeholder="Votre nom" ng-required="true"/>
-          <p ng-hide="myForm.nom.$valid==true || myForm.nom.$pristine==true" class="help-text">obligatoire</p>
+          {{MyFooter.name}}: <input type="text" name="nom" ng-model="MyMessage.name" placeholder="{{MyFooter.help_name}}" ng-required="true"/>
+          <p ng-hide="myForm.nom.$valid==true || myForm.nom.$pristine==true" class="help-text">{{MyFooter.error_name}}</p>
         </div>
         <div class="noseperate small-12 medium-12 large-6 columns nocenter">
-          E-mail: <input type="email" name="email" ng-model="MyMessage.email" placeholder="Votre email" ng-required="true"/>
-            <p ng-hide="myForm.email.$valid || myForm.email.$pristine==true" class="help-text" >email non valide</p>
+          {{MyFooter.email}}: <input type="email" name="email" ng-model="MyMessage.email" placeholder="{{MyFooter.help_email}}" ng-required="true"/>
+            <p ng-hide="myForm.email.$valid || myForm.email.$pristine==true" class="help-text" >{{MyFooter.error_email}}</p>
         </div>
         <div class="noseperate small-12 medium-12 large-12 columns nocenter">
-          Message
-          <textarea rows="5" cols="50" placeholder="5 characters min, 500 max" ng-required="true" ng-minlength="5" ng-maxlength="500" ng-model="MyMessage.message" show-invalid></textarea>
-          <p class="help-text">au moins: {{0 +length_tf}}/500 caractére</p>
+          {{MyFooter.message}}
+          <textarea rows="5" cols="50" placeholder="{{MyFooter.help_message}}" ng-required="true" ng-minlength="5" ng-maxlength="500" ng-model="MyMessage.message" show-invalid></textarea>
+          <p class="help-text">{{MyFooter.error_message}} {{0 +length_tf}}/500</p>
         </div>
         <div class="noseperate small-12 medium-12 large-12 columns nocenter">
-          <input class="small expanded button secondary" type="submit" value="Submit">
+          <input class="small expanded button secondary" type="submit" value="{{MyFooter.submit_message}}">
         </div>
       </form>
     </div>
     <div class="small-12 medium-3 large-3 columns" >
-      <h4>Work With Me:</h4>
+      <h4>{{MyFooter.workwithme}}</h4>
       <div class="row">
         <a class="small-6 medium-12 large-12 columns" target="_blank" href="{{myPers.linkedin}}">
           <i class="fi-social-linkedin small-12 medium-12 large-12 columns"></i>
-          Mon Linkedin
+          {{MyFooter.myLinkedin}}
         </a>
         <a class="noseperate small-6 medium-12 large-12 columns" href="mailto:{{myPers.email}}" target="_blank">
           <i class="fi-mail small-12 medium-12 large-12 columns"></i>
