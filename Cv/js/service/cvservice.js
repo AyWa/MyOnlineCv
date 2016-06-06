@@ -49,38 +49,80 @@ app.factory('myfactory',[function(){
       }
     ]
   }];
-  var dataExp =[{
-      type: 'study',
-      title_type: 'Ecole d\'ingénieur',
-      title_name:'ECE paris',
-      link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
-      location: 'France',
-      when_started: new Date(2013,8,1),
-      when_finished: new Date(2017,6,1),
-      content: 'Étudiant à l\'École Centrale d\'Électronique (ECE) Paris.',
-      majeur: 'Système-embarqué',
-      OA: 'Robotique',
-      mineur: 'Management de projet',
-      diploma: 'Diplome d\'ingénieur',
-    }, {
-      type: 'work',
-      title_type: 'IOs Developper',
-      title_name:'Company name',
-      location: 'Korea',
-      when_started: new Date(2013,8,1),
-      when_finished: 'Actual',
-      content: 'More awesome content.'
+  var dataExp =[
+    {
+      langue:"Francais",
+      data:[{
+        type: 'study',
+        title_type: 'Ecole d\'ingénieur',
+        title_name:'ECE paris',
+        link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: new Date(2017,6,1),
+        content: 'Étudiant à l\'École Centrale d\'Électronique (ECE) Paris.',
+        majeur: 'Système-embarqué',
+        OA: 'Robotique',
+        mineur: 'Management de projet',
+        diploma: 'Diplome d\'ingénieur',
+        },{
+        type: 'work',
+        title_type: 'Developper Ios',
+        title_name:'nom',
+        location: 'Corée du Sud',
+        flagLocation: '../image/flagKr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: 'Actuel',
+        content: 'plus de contenu.'
+        },{
+        type: 'project',
+        title_type: 'Nom du projet',
+        title_name:'xxx',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: new Date(2017,6,1),
+        content: 'plus de contenu.'
+        }]
+    },
+    {
+      langue:"English",
+      data:[{
+        type: 'study',
+        title_type: 'Engineering school',
+        title_name:'ECE paris',
+        link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: new Date(2017,6,1),
+        content: 'Student at (ECE) Paris.',
+        majeur: 'Embedded System',
+        OA: 'Robotique',
+        mineur: 'Project management',
+        diploma: 'Engineering Master degree',
+        },{
+        type: 'work',
+        title_type: 'IOs Developper',
+        title_name:'Company name',
+        location: 'Korea',
+        flagLocation: '../image/flagKr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: 'Actual',
+        content: 'More awesome content.'
+        },{
+        type: 'project',
+        title_type: 'Project name',
+        title_name:'xxx',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2013,8,1),
+        when_finished: new Date(2017,6,1),
+        content: 'More awesome content.'
+        }]
     }
-    , {
-      type: 'project',
-      title_type: 'Project name',
-      title_name:'xxx',
-      location: 'France',
-      when_started: new Date(2013,8,1),
-      when_finished: new Date(2017,6,1),
-      content: 'More awesome content.'
-    }
-  ];
+  ]
   var dataPers=[{
     langue: 'Francais',
     data: {
@@ -116,71 +158,172 @@ app.factory('myfactory',[function(){
       linkedin: 'https://www.linkedin.com/in/marc-hurabielle-55ba1b102/en'
     }
   }];
-  var computerSkills=[{
-    name: 'C++',
-    level: '80',
-    },{
-      name: 'AngularJs',
-      level: '80',
-    },{
+  var computerSkills={
+    Fr:[{
+      url: "/image/skill/cplusplus.png",
       name: 'C++',
-      level: '50',
-    },{
-      name: 'AngularJs',
-      level: '20',
-    },{
-      name: 'AngularJs',
-      level: '100',
-    },{
-      name: 'AngularJs',
-      level: '30',
-    },{
-      name: 'AngularJs',
-      level: '20',
-  }];
-  var langueSkills=[{
-      name: 'Français',
-      level: '100',
-      comment: 'Langue maternelle',
-    },{
-      name: 'Anglais',
       level: '80',
-      comment: 'Professionel, Toeic: 875',
-    },{
-      name: 'Coréen',
-      level: '10',
-      comment: 'Débutant'
-    }
-  ];
-  var listSkills=[
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '80',
+      },{
+        url: "/image/skill/cplusplus.png",
+        name: 'C++',
+        level: '50',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '20',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '100',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '30',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '20',
+    }],
+    En:[{
+      url: "/image/skill/cplusplus.png",
+      name: 'C++',
+      level: '80',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '80',
+      },{
+        url: "/image/skill/cplusplus.png",
+        name: 'C++',
+        level: '50',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '20',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '100',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '30',
+      },{
+        url:"/image/skill/angular.png",
+        name: 'AngularJs',
+        level: '20',
+    }]
+  }
+  var langueSkills=
     {
-      skills: computerSkills,
-    },
-    {
-      skills: langueSkills,
-    },
-  ];
+      Fr:[
+        {
+          url: '../image/flagFr.png',
+          name: 'Français',
+          level: '100',
+          comment: 'Langue maternelle',
+        },{
+          url: '../image/flagUk.png',
+          name: 'Anglais',
+          level: '80',
+          comment: 'Professionel, Toeic: 875',
+        },{
+          url: '../image/flagKr.png',
+          name: 'Coréen',
+          level: '10',
+          comment: 'Débutant'
+        }
+      ],
+      En:[
+        {
+          url: '../image/flagFr.png',
+          name: 'French',
+          level: '100',
+          comment: 'Native language',
+        },{
+          url: '../image/flagUk.png',
+          name: 'English',
+          level: '80',
+          comment: 'Professional, Toeic: 875',
+        },{
+          url: '../image/flagKr.png',
+          name: 'Korean',
+          level: '10',
+          comment: 'Beginner'
+        }
+      ]
+    };
+  var listSkills=[{
+    langue:'Francais',
+    data:[{
+        skills: computerSkills.Fr,
+      },
+      {
+        skills: langueSkills.Fr,
+      },
+    ]},{
+    langue:'English',
+    data:[{
+        skills: computerSkills.En,
+      },
+      {
+        skills: langueSkills.En,
+      },
+    ]
+  }];
   var Hobbies=[{
-      name:'Voyage',
-      icone:'fi-compass',
+    langue: 'Francais',
+    data: [
+      {
+        name:'Voyage',
+        icone:'fi-compass',
+      },{
+        name:'Cinéma',
+        icone:'fi-play-video',
+      },{
+        name:'Sport',
+        icone:'fi-heart',
+      },{
+        name:'Musique',
+        icone:'fi-music',
+      },{
+        name:'Randonnée',
+        icone:'fi-mountains',
+      }
+      ,{
+        name:'Photographie',
+        icone:'fi-photo',
+      }
+    ]
     },{
-      name:'Movie',
-      icone:'fi-play-video',
-    },{
-      name:'Sport',
-      icone:'fi-heart',
-    },{
-      name:'Music',
-      icone:'fi-music',
-    },{
-      name:'Hiking',
-      icone:'fi-mountains',
-    }
-    ,{
-      name:'Photographie',
-      icone:'fi-photo',
-    }
-  ];
+    langue: 'English',
+    data:[
+      {
+        name:'Travel',
+        icone:'fi-compass',
+      },{
+        name:'Movie',
+        icone:'fi-play-video',
+      },{
+        name:'Sport',
+        icone:'fi-heart',
+      },{
+        name:'Music',
+        icone:'fi-music',
+      },{
+        name:'Hiking',
+        icone:'fi-mountains',
+      }
+      ,{
+        name:'Photography',
+        icone:'fi-photo',
+      }
+    ]
+  }];
   var Footer=[{
     langue: 'Francais',
     data:{
@@ -221,6 +364,14 @@ app.factory('myfactory',[function(){
       return Langues;
     },
     gotExp: function(langue){
+      for(var j=0;j<dataExp.length;j++)
+      {
+        if(dataExp[j].langue==langue)
+        {
+          return dataExp[j];
+          break;
+        }
+      }
       return dataExp;
     },
     gotPers: function(langue){
@@ -234,10 +385,24 @@ app.factory('myfactory',[function(){
       }
     },
     gotListSkill:function(langue){
-      return listSkills;
+      for(var j=0;j<listSkills.length;j++)
+      {
+        if(listSkills[j].langue==langue)
+        {
+          return listSkills[j];
+          break;
+        }
+      }
     },
     gotHobbies:function(langue){
-      return Hobbies;
+      for(var i=0;i<Hobbies.length;i++)
+      {
+        if(Hobbies[i].langue===langue)
+        {
+          return Hobbies[i];
+          break;
+        }
+      }
     },
     gotMenu:function(langue){
       for(var i=0;i<menu.length;i++)

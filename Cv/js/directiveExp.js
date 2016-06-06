@@ -9,30 +9,7 @@ app.directive('myExp',['myfactory',function(myfactory){
     templateUrl: 'template/exp.html',
     controller:function($scope){
       //get the Exp obj
-      console.log($scope.myLangue)
-      $scope.mesExperiences = myfactory.gotExp($scope.myLangue);
-      for(var i=0;i<$scope.mesExperiences.length;i++)
-      {
-        if($scope.mesExperiences[i].type=="project"||$scope.mesExperiences[i].type=="work")
-        {
-              $scope.mesExperiences[i].side='left';
-              $scope.mesExperiences[i].badgeClass= 'dangerM';
-              if($scope.mesExperiences[i].type=="project"){
-                $scope.mesExperiences[i].badgeClass= 'warningM';
-                $scope.mesExperiences[i].badgeIconClass='fi-lightbulb';
-              }
-              else $scope.mesExperiences[i].badgeIconClass='fi-clipboard-notes';
-        }
-        else {
-          $scope.mesExperiences[i].side= 'right';
-          $scope.mesExperiences[i].badgeClass= 'primaryM'
-          $scope.mesExperiences[i].badgeIconClass='fi-book-bookmark';
-        }
-        if($scope.mesExperiences[i].location==='Korea')  $scope.mesExperiences[i].flagLocation='/image/flagKr.png';
-        if($scope.mesExperiences[i].location==='France') $scope.mesExperiences[i].flagLocation='/image/flagFr.png';
-        console.log($scope.mesExperiences[i]);
-      }
-      console.log($scope.mesExperiences.length);
+
       $scope.animateElementIn = function($el) {
         $el.removeClass('timeline-hidden');
         $el.addClass('bounce-in');
@@ -41,6 +18,35 @@ app.directive('myExp',['myfactory',function(myfactory){
       $scope.animateElementOut = function($el) {
         $el.addClass('timeline-hidden');
         $el.removeClass('bounce-in');
+      };
+    },
+    link:function(scope,element,attrs){
+      var i=0;
+      scope.$watch('myLangue',function(){
+        scope.ReqmesExperiences = myfactory.gotExp(scope.myLangue);
+        scope.mesExperiences = scope.ReqmesExperiences.data;
+        scope.init(scope);
+        i++;
+      });
+      scope.init=function($scope){
+        for(var i=0;i<$scope.mesExperiences.length;i++)
+        {
+          if($scope.mesExperiences[i].type=="project"||$scope.mesExperiences[i].type=="work")
+          {
+                $scope.mesExperiences[i].side='left';
+                $scope.mesExperiences[i].badgeClass= 'dangerM';
+                if($scope.mesExperiences[i].type=="project"){
+                  $scope.mesExperiences[i].badgeClass= 'warningM';
+                  $scope.mesExperiences[i].badgeIconClass='fi-lightbulb';
+                }
+                else $scope.mesExperiences[i].badgeIconClass='fi-clipboard-notes';
+          }
+          else {
+            $scope.mesExperiences[i].side= 'right';
+            $scope.mesExperiences[i].badgeClass= 'primaryM'
+            $scope.mesExperiences[i].badgeIconClass='fi-book-bookmark';
+          }
+        }
       };
     }
   }

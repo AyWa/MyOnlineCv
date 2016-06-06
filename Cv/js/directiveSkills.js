@@ -3,14 +3,19 @@ app.directive('mySkills',['myfactory',function(myfactory){
   return{
     restrict: 'E',
     scope:{
+      myLangue:'=langue',
       myTabName: '=myTabName',
     },
     templateUrl: 'template/skills.html',
     controller:function($scope){
-      $scope.listSkills=myfactory.gotListSkill();
       console.log("hello skills");
-      console.log($scope.listSkills);
     },
+    link:function(scope,element,attrs){
+      scope.$watch('myLangue',function(){
+        scope.reqListSkills=myfactory.gotListSkill(scope.myLangue);
+        scope.listSkills=scope.reqListSkills.data;
+      });
+    }
   }
 }]);
 app.directive('mySkill',['myfactory',function(myfactory){
@@ -20,17 +25,14 @@ app.directive('mySkill',['myfactory',function(myfactory){
       name:'@',
       pourcentage:'@',
       comment:'@',
+      imgurl:'@',
     },
     templateUrl: 'template/skill.html',
     controller:function($scope,$interval){
       $scope.pourcentage_anim=0;
       var Myannim;
       console.log("hello skill");
-      if($scope.name==='C++') $scope.logo="/image/skill/cplusplus.png";
-      if($scope.name==='AngularJs') $scope.logo="/image/skill/angular.png";
-      if($scope.name==='Français') $scope.logo="/image/flagFr.png";
-      if($scope.name==='Anglais') $scope.logo="/image/flagUk.png";
-      if($scope.name==='Coréen') $scope.logo="/image/flagKr.png";
+      $scope.logo=$scope.imgurl;
       /*$scope.animload = $interval(function(){
          $scope.pourcentage_anim+=2;
          if($scope.pourcentage_anim>=$scope.pourcentage) $interval.cancel($scope.animload);
