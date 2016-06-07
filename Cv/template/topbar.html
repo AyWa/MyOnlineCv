@@ -1,51 +1,55 @@
-<div class="top-bar">
-  <div class="show-for-small-only">
-      <div class="top-bar-title" data-responsive-toggle="example-menu">
-        <button class="menu-icon" type="button" data-open="offCanvasLeft" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-        <div style="display: inline-block;vertical-align: middle;">
-          <ul class="dropdown menu" data-dropdown-menu >
-            <li>
-              <a><img style="width:30px;" src="{{languesiconesselect}}" alt=""/></a>
-              <ul class="dropdown menu" style="min-width:74px; text-align:left;">
-                <li ng-repeat="langue in meslangues">
-                    <a ng-click="Change_Langue(langue.N_langue)"><img style="width:30px;" src="{{langue.url}}" alt="" /></a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+<div class="top-bar show-for-small-only">
+    <div class="title-bar-left">
+      <div class="valign-outer" style="width:72px;height:42.38px">
+        <div class="valign-middle">
+          <div class="valign-inner">
+            <button class="menu-icon" type="button" data-open="offCanvasLeft" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+          </div>
         </div>
       </div>
-  </div>
-  <div class="show-for-medium" ng-cloak>
-    <div class="top-barML">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Cv</li>
-          <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" ng-click="test(mesId[0].id)">{{mesId[0].name}}</a></li>
-          <li>
-            <a>{{mesId[1].name}}</a>
-            <ul class="dropdown menu">
-              <li ng-repeat="object in mesId[1].tab">
-                <a href="" ng-click="test(object.id)">{{object.name}}</a>
-              </li>
-            </ul>
-          </li>
-          <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test(mesId[2].id)">{{mesId[2].name}}</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right" >
-        <ul class="dropdown menu" data-dropdown-menu >
-          <li>
-            <a><img style="width:30px;" src="{{languesiconesselect}}" alt=""/></a>
-            <ul class="dropdown menu" style="min-width:74px; text-align:left;">
-              <li ng-repeat="langue in meslangues">
-                  <a ng-click="Change_Langue(langue.N_langue)"><img style="width:30px;" src="{{langue.url}}" alt="" /></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    </div>
+    <div class="title-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu >
+        <li>
+          <a><img style="width:30px;" src="{{languesiconesselect}}" alt=""/></a>
+          <ul class="dropdown menu" style="min-width:74px; text-align:left;">
+            <li ng-repeat="langue in meslangues">
+                <a ng-click="Change_Langue(langue.N_langue)"><img style="width:30px;" src="{{langue.url}}" alt="" /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="top-bar show-for-medium" ng-cloak>
+  <div class="top-barML">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Cv</li>
+        <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" ng-click="test(mesId[0].id)">{{mesId[0].name}}</a></li>
+        <li>
+          <a>{{mesId[1].name}}</a>
+          <ul class="dropdown menu">
+            <li ng-repeat="object in mesId[1].tab">
+              <a href="" ng-click="test(object.id)">{{object.name}}</a>
+            </li>
+          </ul>
+        </li>
+        <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" ng-click="test(mesId[2].id)">{{mesId[2].name}}</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right" >
+      <ul class="dropdown menu" data-dropdown-menu >
+        <li>
+          <a><img style="width:30px;" src="{{languesiconesselect}}" alt=""/></a>
+          <ul class="dropdown menu" style="min-width:74px; text-align:left;">
+            <li ng-repeat="langue in meslangues">
+                <a ng-click="Change_Langue(langue.N_langue)"><img style="width:30px;" src="{{langue.url}}" alt="" /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

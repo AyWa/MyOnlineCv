@@ -3,6 +3,9 @@
 @import 'foundation';
 @import 'motion-ui';
 @import '_settings';
+.valign-outer { width:72px;height:42.38px;}
+.valign-outer { position: static; display: table; overflow: hidden; }
+.valign-middle { position: static; display: table-cell; vertical-align: middle; width: 100%; }
 textarea{
   resize: none;
 }
