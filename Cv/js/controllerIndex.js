@@ -5,4 +5,9 @@ myApp.controller('indexController', ['$scope','myfactory' ,function($scope,myfac
   $scope.MonMenue=myfactory.gotMenu($scope.Actual_Langue);
   $scope.mesId=$scope.MonMenue.menu;
   $scope.Actual_Langue=$scope.MonMenue.langue;
+  $scope.$watch('Actual_Langue',function(){
+    console.log("test");
+    $scope.MonMenue=myfactory.gotMenu($scope.Actual_Langue);
+    $scope.mesId=$scope.MonMenue.menu;
+  });
 }]);
