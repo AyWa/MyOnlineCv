@@ -9,10 +9,14 @@ myApp.controller('indexController', ['$scope','myfactory' ,function($scope,myfac
     console.log("test");
     $scope.MonMenue=myfactory.gotMenu($scope.Actual_Langue);
     $scope.mesId=$scope.MonMenue.menu;
-    $scope.test=function(nameid){
+    $scope.doScroll=function(nameid){
       nameid = '#'+nameid;
       scrollTo(nameid);
     };
+    $scope.resetmyverticalmenue=function(id){
+      id='#'+id;
+      $(id).foundation('_hideAll');
+    }
     var scrollTo = function (element) {
         $('html, body').animate({
             scrollTop: $(element).offset().top

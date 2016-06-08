@@ -3,7 +3,8 @@ app.directive('myHobbies',['myfactory',function(myfactory){
   return{
     restrict: 'E',
     scope:{
-      myLangue:'=langue'
+      myLangue:'=langue',
+      mySectionName:'=mySectionName'
     },
     templateUrl: 'template/hobbies.html',
     controller:function($scope){

@@ -15,7 +15,7 @@ app.directive('myTopBar',['myfactory',function(myfactory){
     },
     link:function(scope,element,attrs)
     {
-      scope.test=function(nameid){
+      scope.doScroll=function(nameid){
         nameid = '#'+nameid;
         scrollTo(nameid);
       };

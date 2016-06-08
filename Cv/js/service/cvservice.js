@@ -129,7 +129,7 @@ app.factory('myfactory',[function(){
       photo: '/image/cv.png',
       firstname: 'Marc',
       lastname: 'Hurabielle',
-      adresse: '16, avenue Duval le Camus.',
+      adresse: '16, avenue Duval le Camus',
       city: 'Saint-Cloud',
       postal_code: '92210',
       country: 'France',
