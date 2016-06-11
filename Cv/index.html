@@ -19,14 +19,15 @@
             <li class="menu-text">Cv</li>
             <li ng-class="{'top-bar-highlight': hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false"><a href="" data-toggle="offCanvasLeft" ng-click="doScroll(mesId[0].id)">{{mesId[0].name}}</a></li>
             <li>
-              <a>{{mesId[1].name}}</a>
+              <a ng-class="{'top-bar-highlight': hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false">{{mesId[1].name}}</a>
               <ul  class="vertical menu">
                 <li ng-repeat="object in mesId[1].tab">
-                  <a href="" ng-click="doScroll(object.id); resetmyverticalmenue('MyverticalMenu')" data-toggle="offCanvasLeft">{{object.name}}</a>
+                  <a ng-class="{'top-bar-highlight': hovert}" ng-mouseenter="hovert = true" ng-mouseleave="hovert = false" href="" ng-click="doScroll(object.id); resetmyverticalmenue('MyverticalMenu')" data-toggle="offCanvasLeft">{{object.name}}</a>
                 </li>
               </ul>
             </li>
             <li ng-class="{'top-bar-highlight': hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false"><a href="" data-toggle="offCanvasLeft" ng-click="doScroll(mesId[2].id)">{{mesId[2].name}}</a></li>
+            <li ng-class="{'top-bar-highlight': hover4}" ng-mouseenter="hover4 = true" ng-mouseleave="hover4 = false"><a href="" data-toggle="offCanvasLeft" ng-click="doScroll(mesId[3].id)">{{mesId[3].name}}</a></li>
           </ul>
           <!--  à Edit avec une version canvas!-->
           <my-summary incanvas="true" langue="Actual_Langue"></my-summary>
@@ -47,7 +48,7 @@
     <!-- Directive des skills !-->
     <my-hobbies id="{{mesId[2].id}}" my-section-name="mesId[2].name" langue="Actual_Langue"></my-hobbies>
     <!-- Directive du footer !-->
-    <my-footer langue="Actual_Langue"></my-footer>
+    <my-footer id="{{mesId[3].id}}" langue="Actual_Langue"></my-footer>
     <!-- Script !-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>

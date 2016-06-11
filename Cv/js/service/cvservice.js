@@ -26,6 +26,9 @@ app.factory('myfactory',[function(){
       },{
         id: "Hobbies",
         name:"Centres d'intérêts"
+      },{
+        id: "contact",
+        name:"Me contacter"
       }]
     },{
     langue:"English",
@@ -46,6 +49,9 @@ app.factory('myfactory',[function(){
       },{
         id: "Hobbies",
         name:"Hobbies"
+      },{
+        id: "contact",
+        name:"Contact me"
       }
     ]
   }];
@@ -61,30 +67,106 @@ app.factory('myfactory',[function(){
         flagLocation: '../image/flagFr.png',
         when_started: new Date(2013,8,1),
         when_finished: new Date(2017,6,1),
-        content: 'Étudiant à l\'École Centrale d\'Électronique (ECE) Paris.',
-        majeur: 'Système-embarqué',
+        content: 'Projets réalisés: Système de Détermination et de Contrôle de l\'Altitude (ACDS) d\'un Nanosatellite CubeSat Réalisation d\'un drone GPS.',
+        majeur: 'Systèmes embarqués',
         OA: 'Robotique',
         mineur: 'Management de projet',
         diploma: 'Diplome d\'ingénieur',
-        },{
+      },{
+        type: 'project',
+        title_type: 'Projet de l\année prochaine à l\' ECE',
+        title_name:'name',
+        link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2016,8,1),
+        when_finished: new Date(2017,2-1,1),
+        content: 'XXXXXXXX ',
+        majeur: 'Systèmes embarqués',
+      },{
+        type:'study',
+        title_type: 'MOOC',
+        title_name:'Université de Standford',
+        link_name:'https://www.coursera.org/learn/machine-learning',
+        location: 'USA',
+        flagLocation: '../image/flagUsa.png',
+        when_started: new Date(2016,8,1),
+        content: 'Suivi d\'un Massive Open Online Course (MOOC) en anglais de l\'université de Standford sur l\'apprentissage automatique.',
+        diploma: 'Certificat de réussite',
+      },{
         type: 'work',
-        title_type: 'Developper Ios',
-        title_name:'nom',
+        title_type: 'Stagiaire en qualité et innovation',
+        title_name:'Aubay',
+        link_name:'http://www.aubay.com/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2016,4-1,11),
+        when_finished: new Date(2016,7-1,29),
+        content: 'Développement d\'une plateforme de domotique utilisant le protocole de domotique z-Wave et une Raspberry-Pi comme serveur.'
+      },{
+        type: 'project',
+        title_type: 'Projet de quatrième année à l\' ECE',
+        title_name:'ECE3SAT - ADCS',
+        link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2016,8,1),
+        when_finished: new Date(2017,2-1,1),
+        content: 'Le projet ECE3SAT vise à concevoir, développer et lancer un nanosatellite étudiant qui est conforme aux normes de cubesats. La mission de notre CubeSat est d\'apporter une nouvelle solution à la question des débris spatiaux en proposant un nouveau système de désorbitation afin de ne pas produire plus de débris.Le CubeSat testera un système de désorbitation utilisant les interactions avec le champ magnétique terrestre pour se ralentir jusqu\'à se désintégrer dans l\'atmosphère ce qui ne générera pas de débris spatiaux.',
+      },{
+        type:'study',
+        title_type: 'Échange',
+        title_name:'Kyungpook National University',
+        link_name:'http://en.knu.ac.kr/',
+        location: 'Corée du sud',
+        flagLocation: '../image/flagKr.png',
+        when_started: new Date(2014,8-1,27),
+        when_finished: new Date(2015,6-1,29),
+        content: 'Échange d\'un an en Corée du Sud KNU: Kyungpook National University Daegu Majeur: Électronique',
+        majeur: 'Électronique',
+      },{
+        type: 'work',
+        title_type: 'Développeur IOS',
+        title_name:'Nomit',
+        link_name:'http://nomits.com/',
         location: 'Corée du Sud',
         flagLocation: '../image/flagKr.png',
-        when_started: new Date(2013,8,1),
-        when_finished: 'Actuel',
-        content: 'plus de contenu.'
+        when_started: new Date(2015,1-1,1),
+        when_finished: new Date(2015,2-1,20),
+        content: 'Développement d\'une application de suivi de régime sur IOS pour une balance connectée.'
         },{
-        type: 'project',
-        title_type: 'Nom du projet',
-        title_name:'xxx',
+          type: 'project',
+          title_type: 'Projet de deuxième année à l\' ECE',
+          title_name:'Drone GPS',
+          link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+          location: 'France',
+          flagLocation: '../image/flagFr.png',
+          when_started: new Date(2013,9-1,1),
+          when_finished: new Date(2014,7-1,1),
+          content: 'Réalisation d\'un drone GPS',
+        },{
+        type: 'study',
+        title_type: 'Classes préparatoires MPSI',
+        title_name:'Fénelon Sainte Marie',
         location: 'France',
         flagLocation: '../image/flagFr.png',
         when_started: new Date(2013,8,1),
         when_finished: new Date(2017,6,1),
-        content: 'plus de contenu.'
-        }]
+        content: 'Projet réalisé: Phénomène de la physique appliqués aux appareils médicaux.',
+        majeur: 'Maths et physique',
+        mineur: 'Sciences de l\'Ingénieur'
+      },{
+      type: 'study',
+      title_type: 'Baccalauréat scientifique',
+      title_name:'Lycée Eugène Ionesco',
+      location: 'France',
+      flagLocation: '../image/flagFr.png',
+      when_started: new Date(2009,9-1,1),
+      when_finished: new Date(2012,7-1,1),
+      content: 'Projets réalisés: Réalisation d\'un ouvre bouteille automatique Conception 3d d\'un robot nettoyeur de coques de bateaux.  ',
+      majeur: 'Sciences de l\'ingénieur et mathématiques',
+      diploma: 'Mention bien',
+      }]
     },
     {
       langue:"English",
@@ -161,62 +243,118 @@ app.factory('myfactory',[function(){
   var computerSkills={
     Fr:[{
       url: "/image/skill/cplusplus.png",
-      name: 'C++',
-      level: '80',
+      name: 'C/C++',
+      level: '100',
       },{
-        url:"/image/skill/angular.png",
+        url: "/image/skill/angular.png",
         name: 'AngularJs',
+        level: '90',
+      },{
+        url:"/image/skill/javascript.png",
+        name: 'Javascript',
         level: '80',
       },{
-        url: "/image/skill/cplusplus.png",
-        name: 'C++',
-        level: '50',
+        url:"/image/skill/nodejs.png",
+        name: 'NodeJS',
+        level: '80',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '20',
+        url:"/image/skill/python.png",
+        name: 'Python',
+        level: '60',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '100',
+        url:"/image/skill/csharp.png",
+        name: 'C#',
+        level: '70',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
+        url:"/image/skill/java.png",
+        name: 'Java',
+        level: '60',
+      },{
+        url:"/image/skill/Octave.png",
+        name: 'Octave/Matlab',
+        level: '60',
+      },{
+        url:"/image/skill/html.png",
+        name: 'Html/CSS',
+        level: '70',
+      },{
+        url:"/image/skill/objectiveC.png",
+        name: 'Objective-C',
         level: '30',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '20',
-    }],
+        url:"/image/skill/linux.png",
+        name: 'linux',
+        level: '50',
+      },{
+        url:"/image/skill/office.png",
+        name: 'Suite Office',
+        level: '50',
+      },{
+        url:"",
+        name: 'VHDL',
+        level: '30',
+      },{
+        url:"",
+        name: 'Assembleur PIC',
+        level: '30',
+      }],
     En:[{
       url: "/image/skill/cplusplus.png",
-      name: 'C++',
-      level: '80',
+      name: 'C/C++',
+      level: '100',
       },{
-        url:"/image/skill/angular.png",
+        url: "/image/skill/angular.png",
         name: 'AngularJs',
+        level: '90',
+      },{
+        url:"/image/skill/javascript.png",
+        name: 'Javascript',
         level: '80',
       },{
-        url: "/image/skill/cplusplus.png",
-        name: 'C++',
-        level: '50',
+        url:"/image/skill/nodejs.png",
+        name: 'NodeJS',
+        level: '80',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '20',
+        url:"/image/skill/python.png",
+        name: 'Python',
+        level: '60',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '100',
+        url:"/image/skill/csharp.png",
+        name: 'C#',
+        level: '70',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
+        url:"/image/skill/java.png",
+        name: 'Java',
+        level: '60',
+      },{
+        url:"/image/skill/Octave.png",
+        name: 'Octave/Matlab',
+        level: '60',
+      },{
+        url:"/image/skill/html.png",
+        name: 'Html/CSS',
+        level: '70',
+      },{
+        url:"/image/skill/objectiveC.png",
+        name: 'Objective-C',
         level: '30',
       },{
-        url:"/image/skill/angular.png",
-        name: 'AngularJs',
-        level: '20',
-    }]
+        url:"/image/skill/linux.png",
+        name: 'linux',
+        level: '50',
+      },{
+        url:"/image/skill/office.png",
+        name: 'Suite Office',
+        level: '50',
+      },{
+        url:"",
+        name: 'VHDL',
+        level: '30',
+      },{
+        url:"",
+        name: 'Assembleur PIC',
+        level: '30',
+      }]
   }
   var langueSkills=
     {
@@ -346,7 +484,7 @@ app.factory('myfactory',[function(){
     data:{
       formTitle: 'Contact me',
       name: "Name",
-      help_name: "Your nom",
+      help_name: "Your name",
       error_name: "required",
       email: "Email",
       help_email: "Your email",
