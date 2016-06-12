@@ -22,10 +22,17 @@ app.directive('myExp',['myfactory',function(myfactory){
     },
     link:function(scope,element,attrs){
       scope.$watch('myLangue',function(){
+        var tmp=0;
+        if(scope.SelectingExp!=0)
+        {
+          tmp=scope.selectExp.map(function(e) { return e.name; }).indexOf(scope.SelectingExp);
+          console.log(tmp);
+        }
         scope.ReqmesExperiences = myfactory.gotExp(scope.myLangue);
         scope.mesExperiences = scope.ReqmesExperiences.data;
         scope.selectExp= myfactory.gotSelectExp(scope.myLangue).data;
         if(scope.SelectingExp==0) scope.SelectingExp=scope.selectExp[scope.selectExp.length-1].name;
+        else scope.SelectingExp=scope.SelectingExp=scope.selectExp[tmp].name;
         scope.init(scope);
       });
       scope.init=function($scope){
