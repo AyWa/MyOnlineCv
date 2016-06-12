@@ -4,7 +4,7 @@
     <select style="width:120px;" ng-model="SelectingExp">
       <option ng-repeat="typeExp in selectExp" value="{{typeExp.name}}">{{typeExp.name}}</option>
     </select>
-  <div class="row">
+  <div class="row" ng-init='contentlimit=150'>
     <timeline ng-cloak>
       <timeline-event ng-repeat="exp in mesExperiences | selecttype : SelectingExp"><!--side="{{exp.side}}"!-->
         <timeline-badge class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
@@ -25,7 +25,7 @@
               </div>
             </div>
           </timeline-heading>
-          <p>{{exp.content}}</p>
+          <p>{{exp.content | limitTo: contentlimit}}<a ng-show="exp.content.length > contentlimit" ng-click="contentlimit=exp.content.length">...En savoir plus</a><a ng-show="exp.content.length==contentlimit && contentlimit!=150" ng-click="contentlimit=150">Reduire</a></p>
           {{exp.trytry}}
         </timeline-panel>
       </timeline-event>
