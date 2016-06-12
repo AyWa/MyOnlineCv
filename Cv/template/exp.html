@@ -1,8 +1,12 @@
 <div class="separation">
+    <h3 class="titleblock">{{mySectionName}}
+    </h3>
+    <select style="width:120px;" ng-model="SelectingExp">
+      <option ng-repeat="typeExp in selectExp" value="{{typeExp.name}}">{{typeExp.name}}</option>
+    </select>
   <div class="row">
-    <h3>{{mySectionName}}</h3>
     <timeline ng-cloak>
-      <timeline-event ng-repeat="exp in mesExperiences"  side="{{exp.side}}" >
+      <timeline-event ng-repeat="exp in mesExperiences | selecttype : SelectingExp"><!--side="{{exp.side}}"!-->
         <timeline-badge class="{{exp.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
           <i class="{{exp.badgeIconClass}}"></i>
         </timeline-badge>

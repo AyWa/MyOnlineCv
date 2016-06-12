@@ -3,6 +3,10 @@
 @import 'foundation';
 @import 'motion-ui';
 @import '_settings';
+
+.titleblock{
+  display:inline-block;
+}
 .MyimgSummary{
   width:200px;
   margin-bottom: 0px !important;
@@ -113,10 +117,10 @@ input.ng-invalid.ng-dirty{
   border-color: #ec5840;
 }
 
-.ng-invalid.ng-dirty{
+footer .ng-invalid.ng-dirty{
   border-color: #ec5840;
 }
-.ng-valid.ng-dirty{
+footer .ng-valid.ng-dirty{
   border-color: #FFFFFF;
 }
 

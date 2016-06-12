@@ -55,11 +55,30 @@ app.factory('myfactory',[function(){
       }
     ]
   }];
+  var selectExp=[
+    {langue:"Francais",
+    data:[
+      {name: 'Etude'},
+      {name: 'Projets'},
+      {name: 'Travail'},
+      {name: 'All'},
+      {name: 'Highlight'},
+    ]},{
+    langue:"English",
+    data:[
+      {name: 'Study'},
+      {name: 'Project'},
+      {name: 'Work'},
+      {name: 'All'},
+      {name: 'Highlight'},
+    ]}
+  ]
   var dataExp =[
     {
       langue:"Francais",
       data:[{
-        type: 'study',
+        Highlight: true,
+        type: selectExp[0].data[0].name,
         title_type: 'Ecole d\'ingénieur',
         title_name:'ECE paris',
         link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
@@ -73,7 +92,8 @@ app.factory('myfactory',[function(){
         mineur: 'Management de projet',
         diploma: 'Diplome d\'ingénieur',
       },{
-        type: 'project',
+        Highlight: true,
+        type: selectExp[0].data[1].name,
         title_type: 'Projet de l\année prochaine à l\' ECE',
         title_name:'name',
         link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
@@ -84,7 +104,8 @@ app.factory('myfactory',[function(){
         content: 'XXXXXXXX ',
         majeur: 'Systèmes embarqués',
       },{
-        type:'study',
+        Highlight: true,
+        type: selectExp[0].data[0].name,
         title_type: 'MOOC',
         title_name:'Université de Standford',
         link_name:'https://www.coursera.org/learn/machine-learning',
@@ -94,7 +115,8 @@ app.factory('myfactory',[function(){
         content: 'Suivi d\'un Massive Open Online Course (MOOC) en anglais de l\'université de Standford sur l\'apprentissage automatique.',
         diploma: 'Certificat de réussite',
       },{
-        type: 'work',
+        Highlight: true,
+        type: selectExp[0].data[2].name,
         title_type: 'Stagiaire en qualité et innovation',
         title_name:'Aubay',
         link_name:'http://www.aubay.com/',
@@ -104,7 +126,8 @@ app.factory('myfactory',[function(){
         when_finished: new Date(2016,7-1,29),
         content: 'Développement d\'une plateforme de domotique utilisant le protocole de domotique z-Wave et une Raspberry-Pi comme serveur.'
       },{
-        type: 'project',
+        Highlight: true,
+        type: selectExp[0].data[1].name,
         title_type: 'Projet de quatrième année à l\' ECE',
         title_name:'ECE3SAT - ADCS',
         link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
@@ -114,7 +137,8 @@ app.factory('myfactory',[function(){
         when_finished: new Date(2017,2-1,1),
         content: 'Le projet ECE3SAT vise à concevoir, développer et lancer un nanosatellite étudiant qui est conforme aux normes de cubesats. La mission de notre CubeSat est d\'apporter une nouvelle solution à la question des débris spatiaux en proposant un nouveau système de désorbitation afin de ne pas produire plus de débris.Le CubeSat testera un système de désorbitation utilisant les interactions avec le champ magnétique terrestre pour se ralentir jusqu\'à se désintégrer dans l\'atmosphère ce qui ne générera pas de débris spatiaux.',
       },{
-        type:'study',
+        Highlight: true,
+        type: selectExp[0].data[0].name,
         title_type: 'Échange',
         title_name:'Kyungpook National University',
         link_name:'http://en.knu.ac.kr/',
@@ -125,7 +149,8 @@ app.factory('myfactory',[function(){
         content: 'Échange d\'un an en Corée du Sud KNU: Kyungpook National University Daegu Majeur: Électronique',
         majeur: 'Électronique',
       },{
-        type: 'work',
+        Highlight: true,
+        type: selectExp[0].data[2].name,
         title_type: 'Développeur IOS',
         title_name:'Nomit',
         link_name:'http://nomits.com/',
@@ -135,17 +160,19 @@ app.factory('myfactory',[function(){
         when_finished: new Date(2015,2-1,20),
         content: 'Développement d\'une application de suivi de régime sur IOS pour une balance connectée.'
         },{
-          type: 'project',
-          title_type: 'Projet de deuxième année à l\' ECE',
-          title_name:'Drone GPS',
-          link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
-          location: 'France',
-          flagLocation: '../image/flagFr.png',
-          when_started: new Date(2013,9-1,1),
-          when_finished: new Date(2014,7-1,1),
-          content: 'Réalisation d\'un drone GPS',
+        Highlight: false,
+        type: selectExp[0].data[1].name,
+        title_type: 'Projet de deuxième année à l\' ECE',
+        title_name:'Drone GPS',
+        link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
+        location: 'France',
+        flagLocation: '../image/flagFr.png',
+        when_started: new Date(2013,9-1,1),
+        when_finished: new Date(2014,7-1,1),
+        content: 'Réalisation d\'un drone GPS',
         },{
-        type: 'study',
+        Highlight: false,
+        type: selectExp[0].data[0].name,
         title_type: 'Classes préparatoires MPSI',
         title_name:'Fénelon Sainte Marie',
         location: 'France',
@@ -156,7 +183,8 @@ app.factory('myfactory',[function(){
         majeur: 'Maths et physique',
         mineur: 'Sciences de l\'Ingénieur'
       },{
-      type: 'study',
+      Highlight: false,
+      type: selectExp[0].data[0].name,
       title_type: 'Baccalauréat scientifique',
       title_name:'Lycée Eugène Ionesco',
       location: 'France',
@@ -171,7 +199,7 @@ app.factory('myfactory',[function(){
     {
       langue:"English",
       data:[{
-        type: 'study',
+        type: selectExp[1].data[0].name,
         title_type: 'Engineering school',
         title_name:'ECE paris',
         link_name:'http://www.ece.fr/ecole-ingenieur/cursus/specialisations/majeures/systemes-embarques/',
@@ -185,7 +213,7 @@ app.factory('myfactory',[function(){
         mineur: 'Project management',
         diploma: 'Engineering Master degree',
         },{
-        type: 'work',
+        type: selectExp[1].data[2].name,
         title_type: 'IOs Developper',
         title_name:'Company name',
         location: 'Korea',
@@ -194,7 +222,7 @@ app.factory('myfactory',[function(){
         when_finished: 'Actual',
         content: 'More awesome content.'
         },{
-        type: 'project',
+        type: selectExp[1].data[1].name,
         title_type: 'Project name',
         title_name:'xxx',
         location: 'France',
@@ -500,6 +528,17 @@ app.factory('myfactory',[function(){
   return{
     gotLangues: function(){
       return Langues;
+    },
+    gotSelectExp:function(langue){
+      for(var j=0;j<selectExp.length;j++)
+      {
+        if(selectExp[j].langue==langue)
+        {
+          return selectExp[j];
+          break;
+        }
+      }
+      return selectExp;
     },
     gotExp: function(langue){
       for(var j=0;j<dataExp.length;j++)
