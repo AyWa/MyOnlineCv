@@ -1,5 +1,6 @@
 # Web CV
 
+### Online CV (2016). This project was an online resume that I made to learn angular 1
 
 ## Installation
 
